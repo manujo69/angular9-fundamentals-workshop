@@ -45,7 +45,6 @@
               [(ngModel)]="selectedCourse.description" />
           </mat-form-field>
           <section>
-<<<<<<< HEAD
             <h4>{{selectedCourse.percentComplete}}% completed</h4>
             <mat-slider matSlider
             name="percentComplete"
@@ -57,22 +56,6 @@
           <section>
             <mat-checkbox name="favorite" [(ngModel)]="selectedCourse.favorite" color="primary">Favorite</mat-checkbox>
           </section>
-=======
-            <h4>{{selectedCourse.percentComplete}}% Complete</h4>
-            <mat-slider
-              class="full-width"
-              min="0"
-              max="100"
-              name="percentComplete"
-              thumbLabel
-              [(ngModel)]="selectedCourse.percentComplete"
-            >
-            </mat-slider>
-          </section>
-          <section>
-          </section>
-          <mat-checkbox name="favorite" [(ngModel)]="selectedCourse.favorite" ></mat-checkbox>
->>>>>>> a55cd9f267080dbfd94a1589913bac6d81edb7b7
         </mat-card-content>
         <mat-card-actions>
           <button [disabled]="form.invalid" type="submit" mat-button color="primary">Submit</button>
