@@ -8,7 +8,11 @@
         </mat-card-header>
         <mat-card-content>
 
-            <!-- COURSES LIST -->
+        <mat-list dense>
+            <mat-list-item *ngFor="let course of courses" (click)="selectCourse(course.id)">
+                {{course.title}}
+            </mat-list-item>
+        </mat-list>
 
         </mat-card-content>
         </mat-card>
@@ -22,8 +26,9 @@
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content>
-            
-            <!-- COURSE FORM -->
+
+            <span *ngIf="selectedCourseID; else elseSelectedCourse">{{getCurrentCourse().title}}</span>
+            <ng-template #elseSelectedCourse>Select course</ng-template>
 
             </mat-card-content>
             <mat-card-actions>

@@ -11,6 +11,7 @@ export class CoursesComponent implements OnInit {
   // STEP 02: Add event handler to select course
   // STEP 03: Display raw json of selected course
 
+  selectedCourseID: Number = null;
   courses = [
     {
       id: 1,
@@ -32,5 +33,12 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  selectCourse(id: Number) {
+    this.selectedCourseID = id;
+  }
+
+  getCurrentCourse = () => this.courses.find(course => course.id == this.selectedCourseID);
+
 
 }
