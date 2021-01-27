@@ -9,8 +9,13 @@
         <mat-card-content>
 
         <mat-list dense>
-            <mat-list-item *ngFor="let course of courses" (click)="selectCourse(course.id)">
-                {{course.title}}
+            <mat-list-item *ngFor="let course of courses" (click)="selectCourse(course)">
+                <h3 matLine>{{course.title}}</h3>
+                <p matLine>{{course.description}}</p>
+                <button mat-icon-button color="warn"
+                (click)="deleteCourse(course.id); $event.stopImmediatePropagation()">
+                    <mat-icon class="mat-18">delete</mat-icon>
+                </button>
             </mat-list-item>
         </mat-list>
 
@@ -25,17 +30,31 @@
                     Select Course
                 </mat-card-title>
             </mat-card-header>
-            <mat-card-content>
+            <form #form="ngForm" (submit)="saveCourse()">
+              <mat-card-content>
 
-            <span *ngIf="selectedCourseID; else elseSelectedCourse">{{getCurrentCourse().title}}</span>
-            <ng-template #elseSelectedCourse>Select course</ng-template>
+                <mat-form-field>
+                  <input matInput
+                    type="text" name="title" required
+                    placeholder="Title" [(ngModel)]="selectedCourse.title">
+                </mat-form-field>
 
-            </mat-card-content>
-            <mat-card-actions>
+                <mat-form-field>
+                  <input matInput
+                    type="text" name="description"
+                    placeholder="Description" [(ngModel)]="selectedCourse.description">
+                </mat-form-field>
 
-            <!-- COURSE ACTIONS -->
+              </mat-card-content>
+              <mat-card-actions>
 
-            </mat-card-actions>
+                <button [disabled]="form.invalid" type="submit" mat-stroked-button>Submit</button>
+                <button type="button" mat-stroked-button (click)="cancel()">Cancel</button>
+
+              </mat-card-actions>
+            </form>
+            <pre>{{form.value | json}}</pre>
+            <pre>{{form.valid | json}}</pre>
         </mat-card>
     </div>
 </div>
