@@ -6,6 +6,20 @@
       "description": "Learn the fundamentals of Angular 9",
       "percentComplete": 26,
       "favorite": true
+    },
+    {
+      "id": 2,
+      "title": "JavaScript The Really REALLY HARD PARTS!!",
+      "description": "Worship Will Sentance",
+      "percentComplete": 50,
+      "favorite": true
+    },
+    {
+      "id": 4,
+      "title": "Cocina marroquí para Dummies",
+      "description": "Manuel Márquez",
+      "percentComplete": 0,
+      "favorite": false
     }
   ]
 }
