@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
   }
 
   selectLesson(lesson) {
-    console.log('SELECT LESSON FIRED!', lesson);
     this.currentLesson = lesson;
   }
 }

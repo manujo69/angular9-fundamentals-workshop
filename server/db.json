@@ -27,13 +27,6 @@
       "description": "Scott Moss is the Boss",
       "percentComplete": 0,
       "favorite": false
-    },
-    {
-      "id": 4,
-      "title": "Creating a Learning Empire!!",
-      "description": "Marc G Gets It Done",
-      "percentComplete": 40,
-      "favorite": true
     }
   ]
 }
