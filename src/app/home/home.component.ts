@@ -10,13 +10,6 @@ export class HomeComponent implements OnInit {
   title = 'Hello Workshop';
   currentLesson = null;
 
-  // CHALLENGE
-  // STEP 01: Create a LessonsService
-  // hint: ng g shared/services/lessons -d
-  // STEP 02: Add the lessons service to app.module
-  // STEP 03: Inject lessons service into component
-  // STEP 04: Move lessons to service and consume in component
-
   courseLessons = null;
 
   constructor(private lessonsService: LessonsService) { }
