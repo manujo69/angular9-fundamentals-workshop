@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+const BASE_URL = 'http://localhost:3000/';
 
 const BASE_URL = 'http://localhost:3000/';
 
@@ -8,7 +11,11 @@ const BASE_URL = 'http://localhost:3000/';
 })
 export class CoursesService {
   private model = 'courses';
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 03-services-solution
   constructor(private http: HttpClient) { }
 
   all() {
@@ -31,11 +38,20 @@ export class CoursesService {
     return this.http.delete(this.getUrlById(courseId));
   }
 
+<<<<<<< HEAD
   private getUrl() {
     return `${BASE_URL}${this.model}`;
   }
 
   private getUrlById(id) {
     return `${this.getUrl()}/${id}`;
+=======
+  getUrl() {
+    return `${BASE_URL}${this.model}`;
+  }
+
+  getUrlById(id) {
+    return `${this.getUrl()}/${id}`
+>>>>>>> 03-services-solution
   }
 }

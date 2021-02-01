@@ -10,11 +10,6 @@ export class HomeComponent implements OnInit {
   title = 'Hello Workshop';
   currentLesson = null;
 
-  // CHALLENGE
-  // STEP 01: Create a LessonsList component
-  // STEP 02: Create the appropriate inputs and outputs
-  // STEP 03: Render LessonsList component
-
   courseLessons = null;
 
   constructor(private lessonsService: LessonsService) { }
